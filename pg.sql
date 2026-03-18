@@ -31,3 +31,4 @@ create table ProjectEmployeeBridge (
 	employee int references Employees(id),
 	project int references Projects(id)
 );
+

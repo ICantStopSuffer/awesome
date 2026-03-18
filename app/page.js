@@ -1,10 +1,16 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import sql from '@/modules/db';
+import './page.css'
 
-export default function Home() {
+export default async function Home() {
+
+  const result = await sql`select count(*) from Skills`
+
+  for (let gg of result) {
+    console.log(gg)
+  }
   return (
     <div>
-      Hi
+      {result[0].count}
     </div>
   );
 }
