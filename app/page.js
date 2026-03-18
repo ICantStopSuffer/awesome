@@ -1,16 +1,23 @@
-import sql from '@/modules/db';
+import SkillRepository from '@/modules/repositories/SkillRepository';
 import './page.css'
 
 export default async function Home() {
 
-  const result = await sql`select count(*) from Skills`
+  const result = await SkillRepository.getAll();
 
   for (let gg of result) {
     console.log(gg)
   }
+
   return (
     <div>
-      {result[0].count}
+      <ul>
+        {result.map((user) => (
+          <li key={user.id}> 
+            <strong>{user.name}</strong>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
