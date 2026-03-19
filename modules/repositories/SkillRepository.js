@@ -12,6 +12,12 @@ async function getAll() {
     return result
 }
 
+async function getSkillsFromEmployee(id) {
+    const result = await sql`select Skills.id, Skills.name from Skills join SkillEmployeeBridge on Skills.id = SkillEmployeeBridge.skill where SkillEmployeeBridge.employee = ${id}`
+
+    return result
+}
+
 async function insert(name, description) {
     const result = await sql`insert into Skills(name, description) values ( ${name}, ${description})`
 
@@ -32,4 +38,4 @@ async function update(id, name, description) {
     return result[0]
 }
 
-export default {get, getAll, insert, remove, update}
+export default {get, getAll, insert, remove, update, getSkillsFromEmployee}
