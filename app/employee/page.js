@@ -10,8 +10,8 @@ export default async function employeeList() {
     return (
         <Sidebar>
             <ul>
+
                 {result.map(async (employee) => (
-                    
                     <li key={employee.id}> 
                         <Link href = {"/employee/" + employee.id}>
                             name: {employee.name}
