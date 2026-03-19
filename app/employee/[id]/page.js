@@ -46,6 +46,7 @@ export default async function getEmployeeId({params}) {
 
                 <div className="info">
                     <Link href = {"/employee/" + employee.id + "/edit"}>
+
                         Edit
                     </Link>
                 </div>
