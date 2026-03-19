@@ -12,15 +12,18 @@ export default function getEmployeeId({params}) {
   };
 
   return (
-    <form action={submitTest}>
-      <input
-        name="name"
-        id="name"
-        type="text"
-        value={inputValue}
-        onChange={handleChange}
-      />
-      <p>Current input value: {inputValue}</p>
-    </form>
+    <Sidebar>
+        
+        <form action={submitTest}>
+        <input
+            name="name"
+            id="name"
+            type="text"
+            value={inputValue}
+            onChange={handleChange}
+            />
+        <p>Current input value: {inputValue}</p>
+        </form>
+    </Sidebar>
   );
 }

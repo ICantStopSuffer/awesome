@@ -1,8 +1,6 @@
 import './sidebar.css'
 
-export default async function Sidebar({ children }) {
-
-
+export default function Sidebar({ children }) {
     return (
         <>
             <div className="sidebar">
