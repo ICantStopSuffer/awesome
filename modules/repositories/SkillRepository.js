@@ -18,8 +18,8 @@ async function getSkillsFromEmployee(id) {
     return result
 }
 
-async function insert(name, description) {
-    const result = await sql`insert into Skills(name, description) values ( ${name}, ${description})`
+async function insert(name) {
+    const result = await sql`insert into Skills(name) values ( ${name})`
 
     return result[0]
 }
@@ -30,9 +30,9 @@ async function remove(id) {
     return result[0]
 }
 
-async function update(id, name, description) {
+async function update(id, name) {
     const result = await sql`UPDATE Skills
-    SET name = ${name}, description = ${description}
+    SET name = ${name}
     WHERE id = ${id};`
 
     return result[0]

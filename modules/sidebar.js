@@ -4,9 +4,9 @@ export default function Sidebar({ children }) {
         <>
             <div className="sidebar">
                 <a href="/employee">Employee</a>
-                <a href="/projects">Projects</a>
-                <a href="/skills">Skills</a>
-                <a href="/departments">Departments</a>
+                <a href="/project">Projects</a>
+                <a href="/skill">Skills</a>
+                <a href="/department">Departments</a>
             </div>
 
             <div className="main-content">
