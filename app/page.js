@@ -1,23 +1,19 @@
-import SkillRepository from '@/modules/repositories/SkillRepository';
 import './page.css'
+import Sidebar from '@/modules/sidebar';
 
 export default async function Home() {
 
-  const result = await SkillRepository.getAll();
-
-  for (let gg of result) {
-    console.log(gg)
-  }
-
   return (
-    <div>
-      <ul>
+    <Sidebar>
+      <p>works!</p>
+    </Sidebar>
+  );
+}
+
+/*<ul>
         {result.map((user) => (
           <li key={user.id}> 
             <strong>{user.name}</strong>
           </li>
         ))}
-      </ul>
-    </div>
-  );
-}
+      </ul> */
