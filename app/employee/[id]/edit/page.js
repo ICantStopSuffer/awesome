@@ -9,7 +9,7 @@ export default function getEmployeeId({params}) {
 
   useEffect(() => {
     async function doSHIT() {
-        const response = await fetch('/api/skills/getAll', {
+        const response = await fetch('/api/skill/getAll', {
             method: 'GET',
             headers: {
             'Content-Type': 'application/json',
