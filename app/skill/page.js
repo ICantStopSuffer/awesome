@@ -17,6 +17,8 @@ export default async function skillList() {
                 {result.map(async (project) => (
                     <li key={project.id}> 
                         <div className='card'>
+                            {project.id}
+                            <br/>
                             name: {project.name}
                             <br/>
                             <Link href = {"/skill/" + project.id + "/edit"}>

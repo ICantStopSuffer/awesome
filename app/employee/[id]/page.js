@@ -27,19 +27,19 @@ export default async function getEmployeeId({params}) {
                 </div>
 
                 <div className="info">
-                    <strong>projects</strong>
-                    {projects.map((project) => (
-                        <div key={project.id}>
-                            {project.name}
-                        </div>
-                    ))}
-                </div>
-
-                <div className="info">
                     <strong>skills</strong>
                     {skills.map((skill) => (
                         <div key={skill.id}>
                             {skill.name}
+                        </div>
+                    ))}
+                </div>
+                
+                <div className="info">
+                    <strong>projects</strong>
+                    {projects.map((project) => (
+                        <div key={project.id}>
+                            {project.name}
                         </div>
                     ))}
                 </div>

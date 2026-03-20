@@ -26,7 +26,7 @@ async function remove(id) {
 
 async function update(id, name, department) {
     const result = await sql`UPDATE Employees
-    SET name = ${name}, description = ${department}
+    SET name = ${name}, department = ${department}
     WHERE id = ${id};`
 
     return result[0]

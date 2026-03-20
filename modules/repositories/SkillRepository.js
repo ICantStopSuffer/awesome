@@ -38,4 +38,16 @@ async function update(id, name) {
     return result[0]
 }
 
-export default {get, getAll, insert, remove, update, getSkillsFromEmployee}
+async function insertSkillEmployeeBridge(employee, skill) {
+    const result = await sql`insert into SkillEmployeeBridge(employee, skill) values ( ${employee}, ${skill})`
+
+    return result[0]
+}
+
+async function removeSkillEmployeeBridge(employee, skill) {
+    const result = await sql`DELETE FROM SkillEmployeeBridge WHERE employee = ${employee} and skill = ${skill};`
+
+    return result[0]
+}
+
+export default {get, getAll, insert, remove, update, getSkillsFromEmployee, insertSkillEmployeeBridge, removeSkillEmployeeBridge}
